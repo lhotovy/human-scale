@@ -1,0 +1,77 @@
+.scale-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+  position: relative; /* Add relative positioning */
+}
+
+.scale {
+  position: relative;
+  width: 960px;
+  height: 480px;
+  background: linear-gradient(to right, red, yellow, green);
+  border-top-left-radius: 480px;
+  border-top-right-radius: 480px;
+  overflow: hidden;
+}
+
+.pointer {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 36px;
+  height: 480px;
+  background: black;
+  transform-origin: bottom center;
+  transition: transform 1s ease; /* Increase transition duration */
+  clip-path: polygon(50% 0%, 60% 10%, 60% 90%, 50% 100%, 40% 90%, 40% 10%);
+}
+
+.label {
+  position: absolute;
+  font-size: 36px; /* Increase font size by 50% */
+  font-weight: bold;
+  color: white; /* Make the text color light */
+  text-transform: uppercase; /* Make the text uppercase */
+}
+
+.label.bad {
+  bottom: 130px; /* Move down by 20px */
+  left: -145px; /* Move another 15px closer to the screen border */
+  transform: translateY(50%);
+}
+
+.label.middle {
+  top: -70px; /* Move up by 15px */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.label.good {
+  bottom: 130px; /* Move down by 20px */
+  right: -145px; /* Move another 15px closer to the screen border */
+  transform: translateY(50%);
+}
+
+input[type="range"] {
+  margin-top: 40px;
+  width: 960px;
+}
+
+.digital-board {
+  margin-top: 20px;
+  font-size: 48px;
+  font-weight: bold;
+  border: 2px solid #ccc; /* Outer border */
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #222; /* Inner background color */
+  color: #fff; /* Text color */
+  width: 400px; /* Make the board wider */
+  height: 80px; /* Set height */
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
