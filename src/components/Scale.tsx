@@ -21,7 +21,7 @@ const Scale = () => {
     } else if (e.key === 'ArrowRight') {
       setValue(100); // Move to the green end
       setTimeout(() => {
-        setResult('Svatý'); // Display result when pointer reaches the green end
+        setResult('Dost dobrý'); // Display result when pointer reaches the green end
       }, 1000); // Delay to match the pointer movement
     }
     setTimeout(() => {
